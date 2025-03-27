@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats | Hack-Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Hack-Partner</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">What is Hack-Partner</a></li>
+            <li class="active"><a href="chats.html">Chats</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="chat-container">
+        <div class="chat-sidebar">
+            <div class="chat-search">
+                <input type="text" placeholder="Search chats...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="chat-events-filter">
+                <select id="chat-event-filter">
+                    <option value="all">All Events</option>
+                    <option value="techfest-2023">TechFest 2023</option>
+                    <option value="hackathon-2023">Hackathon 2023</option>
+                    <option value="code-jam">Code Jam</option>
+                </select>
+            </div>
+            <div class="chat-list" id="chat-list">
+                <!-- Chat list will be dynamically added here -->
+            </div>
+        </div>
+        <div class="chat-main">
+            <div class="chat-header">
+                <div class="chat-user-info">
+                    <div class="chat-user-avatar">
+                        <img src="https://via.placeholder.com/40" alt="User Avatar">
+                    </div>
+                    <div class="chat-user-details">
+                        <h3>Anonymous User</h3>
+                        <p>TechFest 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be dynamically added here -->
+                <div class="chat-welcome">
+                    <h2>Welcome to Hack-Partner Chats</h2>
+                    <p>Select a conversation to start chatting</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <textarea placeholder="Type a message..." id="message-input"></textarea>
+                <button id="send-message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-username">Username:</label>
+                    <input type="text" id="signup-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <p class="form-footer">Already have an account? <a href="#" id="show-login">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Hack-Partner. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

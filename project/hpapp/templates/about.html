@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Hack-Partner</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Hack-Partner</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="about.html">What is Hack-Partner</a></li>
+            <li><a href="chats.html">Chats</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="about-container">
+        <section class="about-hero">
+            <h1>What is Hack-Partner?</h1>
+            <p>A platform for hackathon enthusiasts to find their perfect team</p>
+        </section>
+
+        <section class="about-features">
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Find Team Members</h3>
+                <p>Looking for a developer, designer, or project manager for your hackathon team? Post your requirements and connect with talented individuals.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Join Hackathons</h3>
+                <p>Showcase your skills and find teams looking for your expertise. Browse hackathons and join the ones that match your interests.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Anonymous Chats</h3>
+                <p>Connect with potential team members through our anonymous chat feature. Discuss ideas, skills, and expectations before revealing your identity.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Privacy First</h3>
+                <p>Your privacy is our priority. Choose when and with whom to share your personal information.</p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create an Account</h3>
+                    <p>Sign up with your email and create an anonymous profile with your skills and interests.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Browse or Post</h3>
+                    <p>Browse available hackathons and team requests or post your own team requirements.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Connect & Chat</h3>
+                    <p>Connect with potential team members through our anonymous chat feature.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Form Your Team</h3>
+                    <p>Once you've found your perfect match, form your team and get ready to hack!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-username">Username:</label>
+                    <input type="text" id="signup-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <p class="form-footer">Already have an account? <a href="#" id="show-login">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Hack-Partner. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
