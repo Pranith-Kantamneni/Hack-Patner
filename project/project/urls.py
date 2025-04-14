@@ -21,5 +21,8 @@ from hpapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('/about', views.about, name='about')
+     path('index.html', views.index, name='index'),
+    path('about', views.about, name='about'),
+    path('chats.html', views.chats, name='chats'),
+    path('profile.html', views.profile, name='profile')
 ]

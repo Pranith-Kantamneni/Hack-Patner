@@ -437,3 +437,101 @@ function sendMessage(text) {
   messages.push(newMessage);
   renderMessages(messages);
 }
+
+// Hero Carousel Script
+document.addEventListener('DOMContentLoaded', function() {
+  const slidesContainer = document.querySelector('.hero-slides-container');
+  const nextBtn = document.querySelector('.next-slide');
+  const prevBtn = document.querySelector('.prev-slide');
+  const slideCount = document.querySelectorAll('.hero-slide').length;
+  let currentSlide = 0;
+  
+  // Function to update slides
+  function goToSlide(index) {
+      // Handle wrapping
+      if (index < 0) index = slideCount - 1;
+      if (index >= slideCount) index = 0;
+      
+      // Update current slide index
+      currentSlide = index;
+      
+      // Move slides container
+      slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+  
+  // Set up click events for arrows
+  nextBtn.addEventListener('click', function() {
+      goToSlide(currentSlide + 1);
+      // Reset the interval timer
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 6000);
+  });
+  
+  prevBtn.addEventListener('click', function() {
+      goToSlide(currentSlide - 1);
+      // Reset the interval timer
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 6000);
+  });
+  
+  // Function for automatic sliding
+  function nextSlide() {
+      goToSlide(currentSlide + 1);
+  }
+  
+  // Start automatic sliding
+  let slideInterval = setInterval(nextSlide, 6000);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slidesContainer = document.querySelector('.hero-slides-container');
+  const nextBtn = document.querySelector('.carousel-arrow.next-slide');
+  const prevBtn = document.querySelector('.carousel-arrow.prev-slide');
+  const slideCount = document.querySelectorAll('.hero-slide').length;
+  let currentSlide = 0;
+
+  // Check if elements exist to avoid errors
+  if (!slidesContainer || !nextBtn || !prevBtn || slideCount === 0) {
+      console.error('Carousel elements not found or slides missing.');
+      return;
+  }
+
+  // Function to update slides
+  function goToSlide(index) {
+      // Handle wrapping
+      if (index < 0) index = slideCount - 1;
+      if (index >= slideCount) index = 0;
+
+      // Update current slide index
+      currentSlide = index;
+
+      // Move slides container
+      slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  // Set up click events for arrows
+  nextBtn.addEventListener('click', function() {
+      goToSlide(currentSlide + 1);
+      // Reset the interval timer
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 6000);
+  });
+
+  prevBtn.addEventListener('click', function() {
+      goToSlide(currentSlide - 1);
+      // Reset the interval timer
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 6000);
+  });
+
+  // Function for automatic sliding
+  function nextSlide() {
+      goToSlide(currentSlide + 1);
+  }
+
+  // Start automatic sliding
+  let slideInterval = setInterval(nextSlide, 6000);
+});
+
+
+
