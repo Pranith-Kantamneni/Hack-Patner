@@ -127,9 +127,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Manually added
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "hpapp/statics",
-   
-]
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_URL = 'hpapp/static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static_src",
+# ]
+# STATIC_ROOT = BASE_DIR / "static"
