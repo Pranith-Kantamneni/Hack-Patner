@@ -131,4 +131,4 @@ STATIC_URL = 'hpapp/static/'
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static_src",
 # ]
-# STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = BASE_DIR / "static"
